@@ -7,4 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-categories = Category.create([{name: "Televisions"}, {name: "Computers"}, {name: "Smartphones"}, {name: "Video cards"}, {name: "Keyboards"}, {name: "Monitors"}])
+categories = Category.create([{name: "Televisions"}, {name: "Computers"}, {name: "Smartphones"}, {name: "Video cards"}, {name: "Keyboards"}, {name: "Monitors"}, {name: "Weed Wackers"}])

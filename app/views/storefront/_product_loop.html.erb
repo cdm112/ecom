@@ -1,8 +1,3 @@
-<h1>Welcome to the bobo electronics store!</h1>
-<p>We come to you(outside any Walgreens)</p>
-<p id="notice"><%= notice %></p>
-
-
 <div class="row">
 <div class="card-deck">
   <% @products.each do |item| %>
@@ -46,8 +41,13 @@
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+       <p>
+         <%= form_with(url: add_to_cart_path) do |form| %>
+            <%= form.hidden_field :product_id, value: item.id %>
+            <%= form.number_field :quantity, placeholder: "How Many?" %>
+            <%= form.submit "Add to cart", class: "btn btn-light" %>
+         <% end %>
+       </p>
       </div>
     </div>
   </div>
@@ -56,6 +56,3 @@
   <% end %>
 </div>
 </div>
-
-
-
